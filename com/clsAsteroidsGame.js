@@ -11,6 +11,9 @@ class clsAsteroidsGame {
         this.ctx = this.canvas.getContext('2d'); // contexto del canvas
 
 
+
+        this._drawRect() ;
+
       
         this._loop(); // main loop del juego
     }
@@ -19,6 +22,17 @@ class clsAsteroidsGame {
     //     this.Doc.addEventListener('__KEYPRESS_CUSTOM', this._InteractionCallBack.bind(this));
 
     // }
+    /////////////////////////////////////////////////////////////////////////////
+
+    	_drawRect(){
+		// Dibuja el rectangulo verde que rodea al canvas
+		this.ctx.beginPath();
+		this.ctx.lineWidth = "4";
+		this.ctx.strokeStyle = "black";
+		this.ctx.rect(0, 0, 680, 520);
+		this.ctx.stroke();
+		// dibuja un rectangulo esto esta facil
+    	}
 
     ////////////////////////////////////////////////////////////////////////////
     _loop(){
